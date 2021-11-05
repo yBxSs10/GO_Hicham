@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+	var x int
+	var stop bool
+	stop = false
+	for stop == false { // ou !stop
+		fmt.Printf("Donnez un nombre entre 10 et 20 :")
+		fmt.Scanln(&x)
+		switch {
+		case x < 10:
+			fmt.Println("Plus grand !")
+		case x > 20:
+			fmt.Println("Plus petit !")
+		default:
+			fmt.Println("OK!")
+			stop = true
+		}
+	}
+
+}
